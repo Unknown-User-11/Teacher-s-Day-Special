@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teacher's Day Diary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Happy Teachers Day</h1>
+  </header>
+  <main>
+    <div class="diary-container">
+      <div class="diary-label" onclick="openDiary()">Favorite Teacher</div>
+      <div id="diaryModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeDiary()">&times;</span>
+          <div class="pages">
+            <!-- Page 2: Teacher Photo (Static) -->
+            <div class="diary-page" id="page2" style="display:none;">
+              <h2>Teacher Photo</h2>
+              <div class="photo-upload-section">
+                <img src="1.jpg" alt="Motiii" style="max-width: 100%; border-radius: 10px;" />
+              </div>
+              <button onclick="nextPage(3)">Next &gt;</button>
+            </div>
+            <!-- Page 3: Appreciation -->
+            <div class="diary-page" id="page3" style="display:none;">
+              <h2>Teacher Appreciation</h2>
+              <br>
+                Dear Motiii,<br />
+                Aap siraf teacher he nhi ho meri bhen bhi ho meri dosy bhi ho.<br />
+                Jab bhi aapko dekhu apne aap simle aa jati hai or jese aap dusro ko khush rakhti ho vese he khud khush raha karo.<br />
+                Aap jese teacher har kisi ke naseeb me nhi hote.<br />
+                Aapko teachers day ki bohat bohat shubhkamnaye.
+              </p>
+              <button onclick="prevPage(2)">&lt; Back</button>
+              <button onclick="nextPage(4)">Next &gt;</button>
+            </div>
+            <!-- Page 4: Another Photo (Static) -->
+            <div class="diary-page" id="page4" style="display:none;">
+              <h2>Add a Special Photo</h2>
+              <div class="photo-upload-section">
+                <img src="2.jpg" alt="Cutiee" style="max-width: 100%; border-radius: 10px;" />
+              </div>
+              <button onclick="prevPage(3)">&lt; Back</button>
+              <button onclick="nextPage(5)">Next &gt;</button>
+            </div>
+            <!-- Page 5: Shayari -->
+            <div class="diary-page" id="page5" style="display:none;">
+              <h2>Shayari for Teacher</h2>
+              <p>
+                Aap kitaabon se zyada dilon ko samajhti ho,<br />
+                Sawal-jawab se nahi, muskaan se raah banati ho.<br />
+                Teacher hote hue bhi ek bhen aur dost lagti ho,<br />
+                College ke safar mein ek hansi ki dhoop ho.<br />
+                Har mushkil kaam aap aasaan bana deti ho,<br />
+                Aur apni simplicity se sabka dil jeet leti ho.
+              </p>
+              <button onclick="prevPage(4)">&lt; Back</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gifts-section">
+      <img src="https://img.icons8.com/fluency/48/gift.png" alt="Gift Box" />
+      <img src="https://img.icons8.com/fluency/48/gift.png" alt="Gift Box" />
+      <img src="https://img.icons8.com/fluency/48/gift.png" alt="Gift Box" />
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
